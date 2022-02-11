@@ -2,7 +2,6 @@ local helixesp = {}
 helixesp.infocol3		=	Color(218, 218, 218, 255)
 helixesp.infocol2		=	Color(0, 0, 0, 255)
 -------------------------
-local AESP = {}
 hook.Add('HUDPaint', 'awHookSomething', function()
 	if LocalPlayer():KeyDown(IN_ATTACK) then
 		for k,v in pairs(ents.GetAll())do
