@@ -5,7 +5,11 @@ function table.ClearShit(tbl)
             newtable[k] = table.ClearShit(v)
             continue 
         end
-        if isfunction(v) or ispanel(v) then
+        if ispanel(v) then
+            newtable[k] = table.ClearShit(v:GetTable())
+            continue
+        end
+        if isfunction(v) then
             newtable[k] = type(v)
             continue
         end
